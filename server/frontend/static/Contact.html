@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Cars</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: darkturquoise;
+            height: 1in;
+        }
+        .header-image {
+            width: 100%; 
+            max-width: 800px; 
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .contact-options {
+            width: 80%;
+            margin: auto;
+            margin-top: 5%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-options h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .contact-options ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .contact-options ul li {
+            margin-bottom: 10px;
+        }
+        .contact-options ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-options ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <h2 style="padding-right: 5%;">Dealerships</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Options -->
+        <div class="contact-options">
+            <!-- Header Image -->
+            <img class="header-image" src="/static/showroom.jpg" alt="Best Cars Showroom">
+
+            <h3>Contact Options</h3>
+            <ul>
+                <li>Customer Service Team: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                <li>Advertising Team: <a href="mailto:advertising@bestcars.com">advertising@bestcars.com</a></li>
+                <li>Public Relations Team: <a href="mailto:pr@bestcars.com">pr@bestcars.com</a></li>
+                <li>Main Office Number: <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
