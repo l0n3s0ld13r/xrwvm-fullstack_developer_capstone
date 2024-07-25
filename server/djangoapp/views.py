@@ -77,12 +77,11 @@ def get_dealer_reviews(request, dealer_id):
         endpoint = f"/fetchReviews/dealer/{dealer_id}"
         reviews = get_request(endpoint)
         for review_detail in reviews:
-            sentiment_response = 
-            analyze_review_sentiments(review_detail['review'])
+            sent_response = analyze_review_sentiments(review_detail['review'])
             logger.debug(
-                f"Review sentiment response: {sentiment_response}"
+                f"Review sentiment response: {sent_response}"
             )
-            review_detail['sentiment'] = sentiment_response.get(
+            review_detail['sentiment'] = sent_response.get(
                 'sentiment', 'Unknown'
             )
         return JsonResponse(
