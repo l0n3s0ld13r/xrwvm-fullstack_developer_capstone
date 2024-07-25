@@ -1,5 +1,7 @@
 from django.http import JsonResponse
 from django.contrib.auth import login, authenticate, logout
+from django.views.decorators.csrf import csrf_exempt  # Import csrf_exempt
+from django.contrib.auth.models import User  # Import User
 import json
 import logging
 
@@ -105,4 +107,4 @@ def get_cars(request):
         initiate()
     car_models = CarModel.objects.select_related('car_make')
     cars = [{"CarModel": car_model.name, "CarMake": car_model.car_make.name} for car_model in car_models]
-    
+    return JsonResponse({"cars": cars})
