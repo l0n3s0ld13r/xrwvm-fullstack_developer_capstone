@@ -78,8 +78,12 @@ def get_dealer_reviews(request, dealer_id):
         reviews = get_request(endpoint)
         for review_detail in reviews:
             sentiment_response = analyze_review_sentiments(review_detail['review'])
-            logger.debug(f"Review sentiment response: {sentiment_response}")
-            review_detail['sentiment'] = sentiment_response.get('sentiment', 'Unknown')
+            logger.debug(
+                f"Review sentiment response: {sentiment_response}"
+            )
+            review_detail['sentiment'] = sentiment_response.get(
+                'sentiment', 'Unknown'
+            )
         return JsonResponse(
             {"status": 200, "reviews": reviews}
         )
