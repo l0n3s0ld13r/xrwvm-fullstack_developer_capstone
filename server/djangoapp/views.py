@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect
+#from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
-from django.contrib import messages
+#from django.contrib import messages
 from datetime import datetime
 import logging
 import json
@@ -51,9 +51,9 @@ def registration(request):
     first_name = data['firstName']
     last_name = data['lastName']
     email = data['email']
-    
+
     username_exist = False
-    
+
     try:
         # Check if user already exists
         User.objects.get(username=username)
@@ -80,7 +80,8 @@ def registration(request):
         return JsonResponse(data)
 
 
-# Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
+# Update the `get_dealerships` render list of dealerships all by default
+# particular state if state is passed
 def get_dealerships(request, state="All"):
     if state == "All":
         endpoint = "/fetchDealers"
